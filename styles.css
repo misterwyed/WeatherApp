@@ -2,53 +2,89 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
-    background-image: url(city.jpg);
+}
+
+body {
+    background-image: url('city.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 100vh;
-  }
-  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+main {
     background-color: rgba(227, 193, 173, 0.85);
     position: relative;
-    top: 30%;
-    border: 1px solid;
-    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     padding: 2em;
-    width: 45%;
-    margin: auto;
-  }
-  
-  h1 {
+    width: 90%;
+    max-width: 500px; /* Responsive maximum width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
     margin-bottom: 20px;
-  }
-  #search {
+    text-align: center; /* Center the heading */
+    font-size: 2em; /* Increased font size for the title */
+    color: #2c3e50; /* Darker color for better contrast */
+}
+
+#search {
     border-radius: 5px 0 0 5px;
     padding: 10px;
     font-size: 16px;
     width: 70%;
     height: 50px;
-    border: none;
-  }
-  
-  #submit {
+    border: 1px solid #ccc;
+    outline: none; /* Remove outline */
+    transition: border 0.3s; /* Smooth transition */
+}
+
+#search:focus {
+    border: 1px solid #2980b9; /* Highlight on focus */
+}
+
+#submit {
     border-radius: 0 5px 5px 0;
     padding: 10px;
     font-size: 16px;
     width: 5em;
     cursor: pointer;
-  }
-  #weather-wrapper {
+    background-color: #2980b9; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+#submit:hover {
+    background-color: #3498db; /* Hover effect */
+}
+
+#weather-wrapper {
     display: flex;
     flex-direction: column;
-    place-items: center;
-  }
-  
-  #weather-search {
+    align-items: center; /* Center items */
+    margin-top: 20px; /* Space above weather results */
+}
+
+#weather-search {
     display: flex;
-    width: 50%;
+    width: 100%; /* Full width for the search container */
     gap: 5px;
-  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        width: 95%; /* Full width on smaller screens */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Reduce font size for smaller screens */
+    }
+}
